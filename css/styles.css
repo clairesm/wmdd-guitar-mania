@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: charter, georgia, times, 'times new roman',
+    serif;
+}
+
+p {
+  line-height: 1.4;
+}
+
+h1 {
+  font-family: Oswald, tahoma, sans-serif;
+  font-weight: 700;
+  font-size: 5rem;
+  margin-top: 0;
+  margin-bottom: 3rem;
+  line-height: 1;
+
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: oswald, tahoma, sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+}
+h3 {
+  font-family: 'roboto slab', courier, 'courier new',
+    monospace;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+nav ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+nav a {
+  font-family: 'roboto slab', courier, 'courier new',
+    monospace;
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+/* RESPONSIVE IMAGES: put this in every stylesheet. =====  */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* FOR THE DEMO =============== */
+.wrapper {
+  padding: 0 2%;
+  margin: 0 auto;
+}
+
+section h2 {
+  text-align: center;
+}
+
+.home article {
+  border: 1px solid #aaa;
+  padding: 0.25rem;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2px;
+  text-align: center;
+}
+
+nav a {
+  background-color: #ddd;
+  display: block;
+  padding: 0.5rem 2%;
+}
+
+/* ==== LAYOUT ==== */
+/* section  */
+/* .home section   */
+
+section[class^='row-'] {
+  display: grid;
+  grid-gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+section.row-featured-contact {
+  display: block;
+}
+
+.article-title {
+  font-weight: bold;
+}
+
+/* ==== Forms ==== */
+label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input,
+textarea {
+  margin-bottom: 0.5rem;
+}
+
+textarea {
+  min-height: 6rem;
+}
+
+/* ==== FOOTER ==== */
+footer {
+  text-align: center;
+}
+
+/* ==== FOOTER ==== */
+@media screen and (min-width: 740px) {
+  nav ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  section[class^='row-'] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  section h2 {
+    /* grid-column: span 2; */
+    grid-column: 1/-1;
+  }
+
+  section .guitar-small:nth-of-type(1) {
+    grid-column: 1/-1;
+  }
+
+  .row-featured-contact {
+    max-width: 700px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  nav ul {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .wrapper {
+    max-width: 1200px;
+  }
+
+  section[class^='row-'] {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  section .guitar-small:nth-of-type(1) {
+    /* grid-column: 1; */
+    grid-column: unset;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .row-featured-contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  section.row-featured-contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: unset;
+  }
+}
